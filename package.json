@@ -1,0 +1,19 @@
+{
+  "name": "shift-reduce-parser",
+  "version": "1.0.0",
+  "description": "A configurable shift reduce parser for natural language processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "shift",
+    "reduce",
+    "parsing",
+    "natural",
+    "language",
+    "parsing"
+  ],
+  "author": "Hugo W.L. ter Doest",
+  "license": "EUPL-1.0"
+}
