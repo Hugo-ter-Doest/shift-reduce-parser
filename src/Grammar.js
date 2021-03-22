@@ -3,7 +3,7 @@
 class Grammar {
   constructor(grammarText) {
     super()
-    this.grammar = parse(grammarText)
+    this.grammar = JSON.parse(grammarText)
   }
 }
 

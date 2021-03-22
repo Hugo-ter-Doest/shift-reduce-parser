@@ -2,6 +2,8 @@
 
 class Stack {
   constructor(initialStack) {
+    super()
+    
     if (initialStack) {
       this.stack = initialStack
     } else {
