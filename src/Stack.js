@@ -2,8 +2,6 @@
 
 class Stack {
   constructor(initialStack) {
-    super()
-    
     if (initialStack) {
       this.stack = initialStack
     } else {
@@ -17,6 +15,14 @@ class Stack {
 
   pop(elt) {
     return this.stack.pop()
+  }
+
+  print() {
+    let s = 'stack: \n'
+    this.stack.forEach(elt => {
+      S += elt + '\n'
+    })
+    return s
   }
 
 }

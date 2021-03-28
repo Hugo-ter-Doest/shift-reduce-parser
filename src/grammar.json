@@ -1,21 +1,21 @@
 {
-  'nonTerminals': ['Assign', 'id', 'Sums', 'Products', 'Value', 'int', 'id', '2'],
-  'terminals': ['A', 'B', 'C', '+', '*', '='],
-  'rules': [
-    ['Assignment', ['id', 'Assign', 'Sums']],
-    ['Sums', ['Sums', 'Plus', 'Products']],
-    ['Sums', ['Products']],
-    ['Products', ['Products', 'Multiply', 'Value']],
-    ['Products', ['Value']],
-    ['Value', ['int']],
-    ['Value', ['id']],
+  "nonTerminals": ["Assign", "id", "Sums", "Products", "Value", "int", "id", "2"],
+  "terminals": ["A", "B", "C", "+", "*", "="],
+  "rules": [
+    ["Assignment", ["id", "Assign", "Sums"]],
+    ["Sums", ["Sums", "Plus", "Products"]],
+    ["Sums", ["Products"]],
+    ["Products", ["Products", "Multiply", "Value"]],
+    ["Products", ["Value"]],
+    ["Value", ["int"]],
+    ["Value", ["id"]],
 
-    ['Plus', ['+']],
-    ['Multiply', ['*']],
-    ['Assign', ['=']],
-    ['id', ['A']],
-    ['id', ['B']],
-    ['id', ['C']],
-    ['int', ['2']]
+    ["Plus", ["+"]],
+    ["Multiply", ["*"]],
+    ["Assign", ["="]],
+    ["id", ["A"]],
+    ["id", ["B"]],
+    ["id", ["C"]],
+    ["int", ["2"]]
   ]
 }

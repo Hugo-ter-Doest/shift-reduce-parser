@@ -1,11 +1,11 @@
 
 const Sentence = require('./Sentence')
+const Stack = require('./Stack')
 
 const DEBUG = true
 
 class Parser {
   constructor(grammer, oracle, lookahead) {
-    super()
     this.grammar = grammer
     this.oracle = oracle
     this.lookahead = lookahead
@@ -22,8 +22,14 @@ class Parser {
   reduceByRule(rule) {
     const LHS = rule[0]
     const RHS = rule[1]
-    RHS.foreach(symbol => {
-      this.stack.pop()
+    RHS.foreach((symbol, index) => {
+      const poppedSymbol = this.stack.pop()
+      if (poppedSymbol === RHS[RHS.length - index - 1]) {
+        DEBUG && console.log('reduceByRule: matched symbol: ' + poppedSymbol)
+      }
+      else {
+        DEBUG && console.log('reduceByRule: mismatched symbol: ' + poppedSymbol)
+      }
     })
     this.stack.push(LHS)
   }

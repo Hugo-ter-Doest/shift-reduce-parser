@@ -1,8 +1,17 @@
 
+const DEBUG = true;
 
 class Oracle {
   matchRuleWithStack(stack, rule) {
-    
+    const RHS = rule[1]
+    let match = true;
+    let index = 0;
+    while (match && index < RHS.length) {
+      match = match && (RHS[index]  === stack.stack[stack.length - index - 1])
+      index++
+    }
+    DEBUG && console.log('matchRuleWithStack: rule: ' + RHS + ': ' + match)
+    return match
   }
 
   nextAction(stack, symbols) {
@@ -12,13 +21,11 @@ class Oracle {
           action: 'REDUCE',
           rule: rule
         }
-      } else {
-        return {
-          action: 'SHIFT'
-        }
       }
     });
-
+    return {
+      action: 'SHIFT'
+    }
   }
 
 }
